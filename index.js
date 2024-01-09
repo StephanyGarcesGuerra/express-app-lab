@@ -19,8 +19,11 @@ app.get('/',(req,res)=> {
 });
 
 app.get('/signup',(req,res)=> {
-    console.log('success!');
     res.render('signup');
+});
+app.post('/signup', (req,res) => {
+    console.log('success');
+    res.send('signup');
 });
 
 app.use('/signup', usersRouter);
